@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Generador {
-    private static final File FILE_IN = new File("a_example.txt");
+    private static final File FILE_IN = new File("b_lovely_landscapes.txt");
 
     public static LinkedList<Photo> devArL() throws FileNotFoundException {
         Scanner sc = new Scanner(FILE_IN);
@@ -19,7 +19,7 @@ public class Generador {
             for (int j = 0; j < l; j++) {
                 t[j] = sc.next().trim();
             }
-            Photo ph = new Photo(pos, l, t);
+            Photo ph = new Photo(pos, l, t, i);
             res.add(ph);
         }
         sc.close();

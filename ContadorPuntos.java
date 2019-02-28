@@ -49,7 +49,7 @@ public class ContadorPuntos {
         int cont = 0;
         
         for (int i = 0; i < inter1.length; i++) {
-            for (int j = 0; i < inter2.length; i++) {
+            for (int j = 0; j < inter2.length; j++) {
                 if (inter1[i].equals(inter2[j])) {
                     res[cont] = inter1[i];
                     cont++;
