@@ -10,9 +10,9 @@ public class Verticales {
         LinkedList<Photo> imagenes = Separador.getV(completa);
         while (!imagenes.isEmpty() && imagenes.size() != 1){
             int i = 1;
-            int min = 1000;
+            int max = 0;
             Photo actual = imagenes.get(0);
-            int parella = 0;
+            int parella = 1;
             while(i < imagenes.size()) {
                 Photo altra = imagenes.get(i);
                 int cont = 0;
@@ -24,9 +24,9 @@ public class Verticales {
                         }
                     }
                 }
-                if(cont < min){
-                    min = cont;
-                    parella = altra.pos[i];
+                if(cont > max){
+                    max = cont;
+                    parella = i;
                 }
                 i++;
             }
