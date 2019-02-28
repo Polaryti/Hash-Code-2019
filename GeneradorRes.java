@@ -11,15 +11,15 @@ public class GeneradorRes {
         int i = aP.size();
         pw.println(i);
         for (int c = 0; c < i; c++) {
-        Photo ph = aP.remove();
-        if (ph.pos[0] != null) {
-            pw.print(ph.pos[0].intValue());
-        } else if (ph.pos[1] != null) {
-            pw.print(ph.pos[1].intValue());
-        }
+            Photo ph = aP.remove();
+                pw.print(ph.pos[0].intValue());
+                pw.print(" ");
+                if (ph.pos[1] != null) {
+                pw.print(ph.pos[1].intValue());
+            }
         }
         pw.close();
-        
+
     }
     
 }
