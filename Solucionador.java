@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.util.LinkedList;
 
 public class Solucionador {
-    private int p = 0;
+    private static int p = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
         for (int i = 0; i < 10000; i++) {
