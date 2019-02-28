@@ -8,7 +8,7 @@ public class Verticales {
     public static LinkedList<Photo> juntar(LinkedList<Photo> completa) {
         LinkedList<Photo> resultado = new LinkedList<Photo>();
         LinkedList<Photo> imagenes = Separador.getV(completa);
-        while (!imagenes.isEmpty()){
+        while (!imagenes.isEmpty() && imagenes.size() != 1){
             int i = 1;
             int min = 1000;
             Photo actual = imagenes.get(0);
