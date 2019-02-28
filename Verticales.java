@@ -41,7 +41,7 @@ public class Verticales {
       
     public static String[] union(String[] array1, String[] array2)
     {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new LinkedList<String>();
         list.addAll(Arrays.asList(array1));
         list.addAll(Arrays.asList(array2));
 
