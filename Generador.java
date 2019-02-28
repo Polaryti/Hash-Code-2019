@@ -19,7 +19,7 @@ public class Generador {
             for (int j = 0; j < l; j++) {
                 t[j] = sc.next().trim();
             }
-            Photo ph = new Photo(pos, l, t, i);
+            Photo ph = new Photo(pos, l, t);
             res.add(ph);
         }
         sc.close();
