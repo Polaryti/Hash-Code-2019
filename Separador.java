@@ -38,4 +38,22 @@ public class Separador {
 
         return horizontal;
     }
+
+    public static LinkedList<Photo> merge(LinkedList<Photo> h, LinkedList<Photo> v) {
+        LinkedList<Photo> res;
+        if (h.size() > v.size()){
+            res = h;
+            for (int i = 0; i < v.size(); i++) {
+                res.add(v.get(i));
+            }
+        }
+        else {
+            res = v;
+            for (int i = 0; i < h.size(); i++) {
+                res.add(h.get(i));
+            }
+        }
+        return res;
+        
+    }
 }
