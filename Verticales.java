@@ -9,31 +9,32 @@ public class Verticales {
         LinkedList<Photo> resultado = new LinkedList<Photo>();
         LinkedList<Photo> imagenes = Separador.getV(completa);
         while (!imagenes.isEmpty() && imagenes.size() != 1){
-            int i = 1;
-            int min = 1000;
-            Photo actual = imagenes.get(0);
-            int parella = 0;
-            while(i < imagenes.size()) {
-                Photo altra = imagenes.get(i);
-                int cont = 0;
-                
-                for(int j = 0; j < actual.tags.length; j++){
-                    for(int k = 0; k < altra.tags.length; k++) {
-                        if(actual.tags[j] == altra.tags[k]){
-                            cont++;
-                        }
-                    }
-                }
-                if(cont < min){
-                    min = cont;
-                    parella = altra.pos[i];
-                }
-                i++;
-            }
-            Photo altra = imagenes.get(parella);
-            Photo creada = new Photo("H", actual.pos[0].intValue(), altra.pos[0].intValue(), union(actual.tags, altra.tags));
+            //int i = 1;
+            //int max = 0;
+            //Photo actual = imagenes.get(0);
+            //int parella = 1;
+            //while(i < imagenes.size()) {
+             //   Photo altra = imagenes.get(i);
+            //    int cont = 0;
+            //    
+            //    for(int j = 0; j < actual.tags.length; j++){
+            //       for(int k = 0; k < altra.tags.length; k++) {
+            //            if(actual.tags[j].equals(altra.tags[k])){
+            //                cont++;
+            //            }
+            //        }
+            //    }
+            //    if(cont > max){
+            //       max = cont;
+            //        parella = i;
+            //    }
+            //    i++;
+            //}
+            //Photo altra = imagenes.get(parella);
+            Photo creada = new Photo("H", imagenes.get(0).pos[0].intValue(), imagenes.get(1).pos[0].intValue(), union(imagenes.get(0).tags, imagenes.get(1).tags));
             resultado.add(creada);
-            imagenes.remove(parella);
+            //imagenes.remove(parella);
+            imagenes.remove(0);
             imagenes.remove(0);
         }
         return resultado;
