@@ -9,67 +9,31 @@ import java.util.ArrayList;
 
 public class mainProg {
 
-    public ArrayList<String[]> getVT(ArrayList<Photo> photos) {
-        ArrayList<String[]> vertical = new ArrayList<String[]>();
+    public ArrayList<Photo> getV(ArrayList<Photo> photos) {
+        ArrayList<Photo> vertical = new ArrayList<Photo>();
+        Photo aux;
 
         for (int i = 0; i < photos.size(); i++) {
-            if (photos.pos) {
-                vertical.add(photos.tags);
+            aux = photos.get(i);
+            if (aux.tipo) {
+                aux.setX(i);
+                vertical.add(aux);
             }
         }
 
         return vertical;
     }
 
-    public ArrayList<String[]> getVP(ArrayList<Photo> photos) {
-        int cont = 0;
-        int contAux = 0;
-        for (int i = 0; i < photos.size(); i++) {
-            if (photos.pos) {
-                cont++;
-            }
-        }
-
-        int[] vertical = new int[cont];
-
-        for (i = 0; i < photos.size() && contAux < cont; i++) {
-            if (photos.pos) {
-                vertical[contAux] = i;
-            }
-            contAux++;
-        }
-
-        return vertical;
-    }
-
-    public ArrayList<String[]> getHT(ArrayList<Photo> photos) {
-        ArrayList<String[]> horizontal = new ArrayList<String[]>();
+    public ArrayList<Photo> getH(ArrayList<Photo> photos) {
+        ArrayList<Photo> horizontal = new ArrayList<Photo>();
+        Photo aux;
 
         for (int i = 0; i < photos.size(); i++) {
-            if (!photos.pos) {
-                horizontal.add(photos.tags);
+            aux = photos.get(i);
+            if (aux.tipo) {
+                aux.setX(i);
+                horizontal.add(aux);
             }
-        }
-
-        return horizontal;
-    }
-
-    public ArrayList<String[]> getHP(ArrayList<Photo> photos) {
-        int cont = 0;
-        int contAux = 0;
-        for (int i = 0; i < photos.size(); i++) {
-            if (!photos.pos) {
-                cont++;
-            }
-        }
-
-        int[] horizontal = new int[cont];
-
-        for (i = 0; i < photos.size() && contAux < cont; i++) {
-            if (photos.pos) {
-                horizontal[contAux] = i;
-            }
-            contAux++;
         }
 
         return horizontal;
