@@ -1,7 +1,7 @@
 public class Photo {
     public boolean tipo;
     public String[] tags;
-    public int[] pos;
+    public Integer[] pos;
 
     public Photo(String p, int n, String[] ar) {
         if (p.equals("H")) {
@@ -15,7 +15,7 @@ public class Photo {
             tags[k] = ar[k];
         }
 
-        pos = new int[2];
+        pos = new Integer[2];
     } 
 
     public void setX(int x) {
