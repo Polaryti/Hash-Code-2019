@@ -19,7 +19,7 @@ public class Verticales {
                 
                 for(int j = 0; j < actual.tags.length; j++){
                     for(int k = 0; k < altra.tags.length; k++) {
-                        if(actual.tags[j] == altra.tags[k]){
+                        if(actual.tags[j].equals(altra.tags[k])){
                             cont++;
                         }
                     }
