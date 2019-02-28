@@ -1,14 +1,16 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.LinkedList;
 
 public class Generador {
     private static final File FILE_IN = new File("a_example.txt");
 
-    public static ArrayList<Photo> devArL() throws FileNotFoundException {
+    public static LinkedList<Photo> devArL() throws FileNotFoundException {
         Scanner sc = new Scanner(FILE_IN);
-        ArrayList<Photo> res = new ArrayList<>();
+        LinkedList<Photo> res = new LinkedList<>();
         int cont = sc.nextInt();
         for (int i = 0; i < cont; i++) {
             String pos = sc.next().trim();
@@ -22,5 +24,15 @@ public class Generador {
         }
         sc.close();
         return res;
+    }
+
+
+    public <T> LinkedList<T> union(LinkedList<T> list1, LinkedList<T> list2) {
+        Set<T> set = new HashSet<T>();
+
+        set.addAll(list1);
+        set.addAll(list2);
+
+        return new LinkedList<T>(set);
     }
 }
