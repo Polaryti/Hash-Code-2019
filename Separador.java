@@ -2,15 +2,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.LinkedList;
 /**
- * mainProg
+ * Separador
  */
 
-public class mainProg {
+public class Separador {
 
-    public ArrayList<Photo> getV(ArrayList<Photo> photos) {
-        ArrayList<Photo> vertical = new ArrayList<Photo>();
+    public static LinkedList<Photo> getV(LinkedList<Photo> photos) {
+        LinkedList<Photo> vertical = new LinkedList<Photo>();
         Photo aux;
 
         for (int i = 0; i < photos.size(); i++) {
@@ -24,13 +24,13 @@ public class mainProg {
         return vertical;
     }
 
-    public ArrayList<Photo> getH(ArrayList<Photo> photos) {
-        ArrayList<Photo> horizontal = new ArrayList<Photo>();
+    public static LinkedList<Photo> getH(LinkedList<Photo> photos) {
+        LinkedList<Photo> horizontal = new LinkedList<Photo>();
         Photo aux;
 
         for (int i = 0; i < photos.size(); i++) {
             aux = photos.get(i);
-            if (aux.tipo) {
+            if (!aux.tipo) {
                 aux.setX(i);
                 horizontal.add(aux);
             }
