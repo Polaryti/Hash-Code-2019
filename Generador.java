@@ -4,11 +4,9 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Generador {
-
     private static final File FILE_IN = new File("a_example.txt");
-    private static final File FILE_OUT = new File("a_example_out.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static ArrayList<Photo> devArL() throws FileNotFoundException {
         Scanner sc = new Scanner(FILE_IN);
         ArrayList<Photo> res = new ArrayList<>();
         int cont = sc.nextInt();
@@ -20,10 +18,9 @@ public class Generador {
                 t[j] = sc.next().trim();
             }
             Photo ph = new Photo(pos, l, t);
-            ph.toStrin();
             res.add(ph);
         }
-        System.out.println(res.size());
         sc.close();
+        return res;
     }
 }
