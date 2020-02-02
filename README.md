@@ -1,7 +1,7 @@
 # HashCode2019
-Repositorio para HashCode 2019
+Repositorio para Hash Code 2019
 
-Para clonar el repositorio
+Instrucciones para el equipo para clonar el repositorio:
 1. Clonar repositorio:  git clone *url*           // Ponerse en la carpeta que quieras
 Pasos para modificar y actualizar ramas
 2. Crear rama:          git branch *nombre*       // Nombre de cada uno en minuscula: pere, alex, mario
